@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAKOSWAP | Genesis Portal</title>
+    <meta name="description" content="Check your eligibility for the TAKO token airdrop and claim your tokens" />
+    <meta name="author" content="TAKOSWAP" />
+
+    <meta property="og:title" content="TAKOSWAP | Genesis Portal" />
+    <meta property="og:description" content="Check your eligibility for the TAKO token airdrop and claim your tokens" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@takoswap" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="icon" href="/lovable-uploads/81a85bb7-ad0c-48ce-ad75-b14159c954fb.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Loading Screen -->
+      <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+          <div class="logo-container">
+            <img src="./app/imagefile/logo2.png" alt="TAKOSWAP Octopus Logo" class="logo">
+          </div>
+          
+          <div class="loading-text">
+            <h1>TAKOSWAP</h1>
+            <p class="pulse">Loading Genesis Portal...</p>
+          </div>
+          
+          <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content (initially hidden) -->
+      <div id="mainContent" class="hidden">
+        <!-- Navbar -->
+        <header class="navbar">
+          <div class="container">
+            <div class="logo-section">
+              <img src="./app/imagefile/logo2.png" alt="TAKOSWAP Octopus Logo" class="nav-logo">
+              <span class="brand-name">TAKOSWAP</span>
+            </div>
+
+            <nav class="desktop-nav">
+              <a href="#claim" class="nav-link">Claim</a>
+              <a href="https://takoswap.app/" class="nav-link">Swap</a>
+              <a href="https://takoswap.app/" class="nav-link">Pool</a>
+              <!-- <a href="./app/index.html">
+                <button class="connect-wallet-btn">Connect Wallet</button>
+              </a> -->
+              
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+              <span class="menu-icon"></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <div id="mobileNav" class="mobile-nav">
+          <nav class="mobile-nav-links">
+            <a href="./ConnectTAko/index.html" class="mobile-nav-link">Claim</a>
+            <a href="https://takoswap.app/" class="mobile-nav-link">Swap</a>
+            <a href="https://takoswap.app/" class="mobile-nav-link">Pool</a>
+            <a href="./app/index.html">
+              <button class="connect-wallet-btn">Connect Wallet</button>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-container">
+          <div class="hero-section">
+            <h1 class="gradient-text">Welcome to TAKO Genesis</h1>
+            <p class="hero-description">Check your eligibility for the TAKO airdrop and claim your tokens.</p>
+          </div>
+          
+          <!-- Eligibility Checker Card -->
+          <div class="eligibility-checker">
+            <div class="glass-card">
+              <div class="card-header">
+                <h2 class="card-title">TAKO Genesis Portal</h2>
+                <p class="card-description">Check if you're eligible for TAKO token airdrop</p>
+              </div>
+              
+              <div class="card-content">
+                <!-- Eligibility Form (shown by default) -->
+                <div id="checkEligibilityForm" class="eligibility-form">
+                  <div class="input-group">
+                    <label for="walletAddress">Enter your wallet address</label>
+                    <input type="text" id="walletAddress" placeholder="0x..." class="input-field">
+                  </div>
+                  
+                  <button id="checkEligibilityBtn" class="primary-btn">
+                    <span class="btn-content">
+                      <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      </svg>
+                      Check Eligibility
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Steps Section -->
+          <div class="steps-section">
+            <div class="step-card">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Step 1: Check Eligibility</h3>
+              <p>Enter your wallet address to check if you're eligible for the TAKO airdrop.</p>
+            </div>
+            
+            <div class="step-card">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <h3>Step 2: Claim Tokens</h3>
+              <p>If eligible, claim your TAKO tokens directly to your wallet by connecting manually.</p>
+            </div>
+            
+            <div class="step-card">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 5H19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Step 3: Swap & Pool</h3>
+              <p>Use your TAKO tokens to swap or provide liquidity in the TAKO ecosystem.</p>
+            </div>
+          </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <p>© 2025 TAKOSWAP. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Modal for Eligibility Results -->
+    <div id="eligibilityModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="modal-close">&times;</span>
+        <div class="eligibility-results">
+          <div class="success-icon-container">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+          </div>
+          
+          <h3 class="results-title">Congratulations!</h3>
+          <p class="results-text">You're eligible for the TAKO airdrop</p>
+          
+          <div class="allocation-box">
+            <p class="allocation-label">Your allocation:</p>
+            <p id="tokenAmount" class="allocation-amount">12,965 TAKO</p>
+          </div>
+          <a href="./app/index.html">
+            <button id="claimTokensBtn" class="primary-btn">Claim Your TAKO</button>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay"></div>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
